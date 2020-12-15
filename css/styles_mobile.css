@@ -11,7 +11,7 @@
 /* ------font styles------ */
 
 @font-face {
-    font-family: "MonumentGr SemiMono";
+    font-family: "Monument Grotesk Semi-Mono";
     src: url("../media/font/monumentgrotesk-semi-mono.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
@@ -19,7 +19,7 @@
 
 
 h1 {
-    font-family: "MonumentGr SemiMono";
+    font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
     font-size: 18pt;
     line-height: 23pt;
@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-    font-family: "MonumentGr SemiMono";
+    font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
     font-size: 11pt;
     line-height: 17pt;
@@ -74,7 +74,7 @@ a {
 
 body {
     display: none;
-    font-family: "MonumentGr SemiMono";
+    font-family: "Monument Grotesk Semi-Mono";
     color: rgb(255, 51, 0);
     overflow: hidden;
 }
