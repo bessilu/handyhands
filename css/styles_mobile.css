@@ -1,0 +1,803 @@
+/* ------inizialising of the css------ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 11pt;
+}
+
+
+/* ------font styles------ */
+
+@font-face {
+    font-family: "MonumentGr SemiMono";
+    src: url("../media/font/monumentgrotesk-semi-mono.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+    font-family: "MonumentGr SemiMono";
+    font-weight: 500;
+    font-size: 18pt;
+    line-height: 23pt;
+    letter-spacing: 1pt;
+}
+
+h2 {
+    font-family: "MonumentGr SemiMono";
+    font-weight: 500;
+    font-size: 11pt;
+    line-height: 17pt;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 51, 0);
+    cursor: pointer;
+    user-select: none;
+}
+
+.small_txt {
+    line-height: 17pt;
+    letter-spacing: .5pt;
+    text-decoration: none;
+    color: rgb(255, 51, 0);
+    text-transform: capitalize;
+}
+
+.small_links {
+    letter-spacing: .5pt;
+    text-decoration: none;
+    color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+
+.big_link {
+    font-size: 18pt;
+    letter-spacing: 1pt;
+    line-height: 18pt;
+    padding-bottom: .5pt;
+}
+
+.big_link:hover {
+    border-bottom: 1.5pt solid;
+}
+
+
+
+/**/
+
+body {
+    display: none;
+    font-family: "MonumentGr SemiMono";
+    color: rgb(255, 51, 0);
+    overflow: hidden;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+}
+
+.column {
+    height: 100vh;
+}
+
+
+
+
+
+/* ------FIRST COLUMN STYLES------ */
+
+#viewport_column {
+    padding: 25pt;
+    width: 100%;
+}
+
+#menu_box {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 25pt 0;
+    column-gap: 10pt;
+    user-select: none;
+}
+
+.menu_button {
+    line-height: 19pt;
+    padding-bottom: .5pt;
+    cursor: pointer;
+    border-bottom: 1.5pt solid rgba(0, 0, 0, 0);
+}
+
+.menu_button.active {
+    border-bottom: 1.5pt solid rgb(255, 51, 0);
+}
+
+.menu_button:hover {
+    border-bottom: 1.5pt solid rgb(255, 51, 0);
+}
+
+
+#viewport_box {
+    width: 100%;
+}
+
+
+
+
+
+
+/* profile tab */
+
+#profile_tab {
+    width: 100%;
+    height: calc(100vh - 69.5pt);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 15pt;
+
+}
+
+
+
+#left_c {
+    min-width: 34%;
+    width: 34%;
+    user-select: none;
+}
+
+
+
+#left_c h2 {
+    line-height: 25pt;
+}
+
+#carousel {
+    width: 100%;
+    height: 28vw;
+    position: relative;
+    transition: height .05s ease;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.hide {
+    opacity: 0;
+}
+
+
+
+#slider_buttons {
+    margin: 20pt 0 25pt 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider_button {
+    height: 18pt;
+    line-height: 15pt;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
+
+
+#right_c {
+    overflow-x: hidden;
+    margin-left: 25pt;
+    max-width: 57%;
+}
+
+#right_c h1 {
+    line-height: 14pt;
+    padding-bottom: 11pt;
+}
+
+
+#bio {
+    padding-bottom: 20pt;
+}
+
+.bio_title {
+    margin: 30pt 0 2pt 0;
+}
+
+.bio_txt {
+    font-size: 14pt;
+    letter-spacing: .6pt;
+}
+
+
+
+
+
+@media only screen and (max-width: 1250px) {
+
+    #carousel {
+        height: 262pt;
+    }
+
+}
+
+
+
+/* vv hide scrollbar vv*/
+
+#profile_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#profile_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+#right_c::-webkit-scrollbar {
+    display: none;
+}
+
+#right_c {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#video_canvas {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(252, 252, 255, .85);
+    z-index: 10;
+}
+
+#video_profile {
+    min-height: 50%;
+    width: 60%;
+    max-width: 80%;
+
+}
+
+#video_trigger {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* covers tab */
+
+#covers_tab {
+    width: calc(100% + 25pt);
+    margin-left: -12.5pt;
+    height: calc(100vh - 69.5pt);
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: wrap;
+}
+
+
+/* vv hide scrollbar vv*/
+
+#covers_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#covers_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+.cover_card {
+    margin: 0 12.5pt 25pt 12.5pt;
+    width: calc(33.3% - 25pt);
+}
+
+.cover_card.closet {
+    width: calc(25% - 25pt);
+}
+
+@media only screen and (max-width: 1220px) {
+    .cover_card {
+        margin: 0 12.5pt 25pt 12.5pt;
+        width: calc(50% - 25pt);
+    }
+
+    .cover_card.closet {
+        width: calc(33.3% - 25pt);
+    }
+}
+
+
+
+.cover_img {
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.cover_label {
+    margin-top: 11pt;
+}
+
+
+
+/* project tab */
+
+#project_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: column;
+}
+
+/* vv hide scrollbar vv*/
+
+#project_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#project_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#project_tab h2 {
+    margin: 24pt 0 9pt 0;
+}
+
+#project_tab h2:first-child {
+    margin: 15pt 0 9pt 0;
+}
+
+
+
+/* story tab */
+
+#story_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+
+/* vv hide scrollbar vv*/
+
+#story_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#story_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#story_tab h2 {
+    margin: 15pt 0 9pt 0;
+}
+
+#video_story {
+    padding: 25pt 0 25pt 0;
+}
+
+
+
+/* subscribe tab */
+
+#subscribe_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+
+/* vv hide scrollbar vv*/
+
+#subscribe_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#subscribe_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+
+#subscribe_tab h1 {
+    margin: 15pt 0 0 0;
+}
+
+#subscribe_tab a {
+    margin-top: 25pt
+}
+
+
+
+/* contacts tab */
+
+#contacts_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+
+/* vv hide scrollbar vv*/
+
+#contacts_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#contacts_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#contacts_tab h2 {
+    margin: 15pt 0 9pt 0;
+}
+
+#contacts_tab h1 {
+    margin: 0pt 0 25pt 0;
+}
+
+
+
+/* disclaimer tab */
+
+#disclaimer_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+
+/* vv hide scrollbar vv*/
+
+#disclaimer_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#disclaimer_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#disclaimer_tab h2 {
+    margin: 15pt 0 9pt 0;
+}
+
+
+
+/* supporters tab */
+
+#supporters_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: column;
+}
+
+/* vv hide scrollbar vv*/
+
+#supporters_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#supporters_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#supporters_tab h2 {
+    margin: 15pt 0 25pt 0;
+}
+
+#logo_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.supp_logo {
+    height: 50pt;
+    width: auto;
+}
+
+
+
+
+/* credits tab */
+
+#credits_tab {
+    height: calc(100vh - 69.5pt);
+    padding-bottom: 25pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-flow: column;
+}
+
+/* vv hide scrollbar vv*/
+
+#credits_tab::-webkit-scrollbar {
+    display: none;
+}
+
+#credits_tab {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+#credits_tab h2:first-child {
+    margin: 15pt 0 5pt 0;
+}
+
+#credits_tab h2 {
+    margin: 5pt 0 5pt 0;
+}
+
+#credits_tab a {
+    margin-bottom: 20pt
+}
+
+
+
+/* tab hider */
+
+
+.tab {
+    display: flex;
+}
+
+
+
+
+/* ------second column (ids showcase) styles------ */
+
+#showcase_column {
+    padding: 40pt 20pt 0vw 20pt;
+    min-width: 360px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    overflow: auto;
+}
+
+
+/* vv hide scrollbar vv*/
+
+#showcase_column::-webkit-scrollbar {
+    display: none;
+}
+
+#showcase_column {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ^^ hide scrollbar ^^*/
+
+.id_card {
+    width: 100%;
+    height: 70pt;
+    margin-bottom: 39pt;
+    display: flex;
+}
+
+.id_card:last-child {
+    margin-bottom: 25pt;
+}
+
+.id_img {
+    width: 21%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.id_info {
+    max-width: 79%;
+    margin: -4pt 0 0 11pt;
+}
+
+
+/* ------third column (searchbox) styles------ */
+
+#search_column {
+    padding: 25pt 25pt 25pt 25pt;
+    min-width: 250px;
+    display: flex;
+    flex-flow: column;
+    user-select: none;
+}
+
+.language_switch {
+    max-width: 26pt;
+    line-height: 19pt;
+    padding-bottom: .5pt;
+    cursor: pointer;
+    border-bottom: 1.5pt solid rgba(0, 0, 0, 0)
+}
+
+
+.language_switch:hover {
+    border-bottom: 1.5pt solid;
+}
+
+
+#search_container {
+    margin-top: 42pt;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    height: 26pt;
+    margin: 4pt 0 13pt 0;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+}
+
+.select-selected {
+    border: 1.5pt solid rgb(255, 51, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    content: "↓";
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    transform: rotate(180deg)
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    padding: 5pt 4pt 5pt 4pt;
+    height: 26pt;
+    width: 100%;
+    cursor: pointer;
+}
+
+.select-items div {
+    padding: 6pt 0 0 4pt;
+    border: 0;
+    margin: 0;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1.5pt solid rgb(255, 51, 0);
+    border-top: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#search_button {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+#bottom_links {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    bottom: 20pt;
+    position: absolute;
+    background-color: white;
+}
+
+#bottom_links .small_links {
+    margin-top: 19pt;
+}
+
+
+
+
+
+
+
+.off {
+    display: none;
+}
+
+.on {
+    display: flex;
+}
