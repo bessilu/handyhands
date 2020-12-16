@@ -210,6 +210,8 @@ $(document).ready(function () {
     });
     $("#video_canvas").click(function () {
         $("#video_canvas").toggleClass("off").toggleClass("on");
+        $("#video_profile").get(0).pause();
+        $("#video_profile").get(0).currentTime = 0;
     });
 
 });

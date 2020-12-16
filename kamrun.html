@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <link href="media/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Handy Hands / Kamrun</title>
+    <title>Handy Hands</title>
     <meta name="description" content="Description">
     <meta name="author" content="Author">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="css/styles.css" />
+    <link rel="stylesheet" media="all and (max-width: 1024px)" href="css/styles_mobile.css" />
 
 </head>
 
@@ -24,7 +25,7 @@
                 </a>
                 <h1 id="project_button" class="menu_button">Progetto</h1>
                 <h1 id="story_button" class="menu_button">Storia</h1>
-
+                <h1 id="lang_button" class="menu_button">Deutsch</h1>
             </div>
 
 
@@ -34,6 +35,7 @@
 
 
             <div id="viewport_box">
+
 
 
                 <!-------- profile tab ------->
@@ -50,17 +52,6 @@
                             <div id="previous" class="slider_button">←</div>
                             <div id="next" class="slider_button">→</div>
                         </div>
-                        <script>
-                            $(document).ready(function() {
-
-                                $("#number a").click(function() {
-                                    $(this).text(function(i, v) {
-                                        return v === '→ Contatta' ? '→ 328 6627296' : '→ Contatta'
-                                    })
-                                });
-                            });
-                        </script>
-                        <h2 id="number"><a>→ Contatta</a></h2>
                         <h2 id="video_trigger">→ video</h2>
                     </div>
 
@@ -81,11 +72,12 @@
 
                     <div id="video_canvas" class="off">
                         <video id="video_profile" controls>
-                            <source src="media/artigiani/KAMRUN/video.mp4" type="video/mp4">
+                            <source id="gnn" src="media/artigiani/KAMRUN/video.mp4" type="video/mp4">
                             Il tuo browser non supporta questo player.
                         </video>
                     </div>
                 </div>
+
 
 
                 <!-------- ability covers tab ------->
@@ -94,8 +86,7 @@
 
                     <div class="cover_card cuoca sarta bangladesh bolzano">
                         <a href="kamrun.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/KAMRUN/cover.jpg)">
-                            </div>
+                            <img class="cover_img" src="media/artigiani/KAMRUN/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>kamrun nahar</h2>
                                 <p class="small_txt">bangladesh</h2>
@@ -105,7 +96,7 @@
 
                     <div class="cover_card orologiaio iran brennero">
                         <a href="akif.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/AKIF/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/AKIF/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>akif kishiyer</h2>
                                 <p class="small_txt">iran</h2>
@@ -115,7 +106,7 @@
 
                     <div class="cover_card sarta venezuela bolzano">
                         <a href="devorah.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/DEVORAH/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/DEVORAH/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>devora rojas</h2>
                                 <p class="small_txt">venezuela</h2>
@@ -125,7 +116,7 @@
 
                     <div class="cover_card kenia musicista bolzano">
                         <a href="elvis.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/ELVIS/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/ELVIS/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>elvis kakiti</h2>
                                 <p class="small_txt">kenia</h2>
@@ -135,7 +126,7 @@
 
                     <div class="cover_card pittrice russia bolzano">
                         <a href="tatiana.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/TATIANA/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/TATIANA/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>tatiana</h2>
                                 <p class="small_txt">russia</h2>
@@ -145,7 +136,7 @@
 
                     <div class="cover_card ballerina decoratrice dominicana bolzano">
                         <a href="clary.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/RAMONA/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/RAMONA/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>clary rosario</h2>
                                 <p class="small_txt">Rep. dominicana</h2>
@@ -155,7 +146,7 @@
 
                     <div class="cover_card decoratrice dominicana bologna">
                         <a href="sandra.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/sandra/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/SANDRA/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>sandra</h2>
                                 <p class="small_txt">rep. dominicana</h2>
@@ -165,7 +156,7 @@
 
                     <div class="cover_card sarta senegal laives">
                         <a href="aziz.html">
-                            <div class="cover_img" style="background-image: url(media/artigiani/AZIZ/cover.jpg)"></div>
+                            <img class="cover_img" src="media/artigiani/AZIZ/cover.jpg"></img>
                             <div class="cover_label off">
                                 <h2>aziz</h2>
                                 <p class="small_txt">senegal</h2>
@@ -302,118 +293,127 @@
         <!-------- second column ------->
 
         <div id="showcase_column" class="column">
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/KAMRUN/ID.jpg)" onclick="window.location='kamrun.html'"></div>
-                <div class="id_info">
-                    <a href="kamrun.html">
-                        <h2>Kamrun Nahar</h2>
-                    </a>
-                    <p class="small_txt">
-                        Bangladesh > Bolzano
-                    </p>
-                    <p class="small_txt">
-                        Cuoca, sarta
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/AKIF/ID.jpg)" onclick="window.location='akif.html'"></div>
-                <div class="id_info">
-                    <a href="akif.html">
-                        <h2>akif kishiyer</h2>
-                    </a>
-                    <p class="small_txt">
-                        Iran > Brennero
-                    </p>
-                    <p class="small_txt">
-                        Orologiaio
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/DEVORAH/ID.jpg)" onclick="window.location='devorah.html'"></div>
-                <div class="id_info">
-                    <a href="devorah.html">
-                        <h2>devorah rojas</h2>
-                    </a>
-                    <p class="small_txt">
-                        Venezuela > Bolzano
-                    </p>
-                    <p class="small_txt">
-                        Sarta
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/ELVIS/ID.jpg)" onclick="window.location='elvis.html'"></div>
-                <div class="id_info">
-                    <a href="elvis.html">
-                        <h2>elvis kakiti</h2>
-                    </a>
-                    <p class="small_txt">
-                        Kenia > Bolzano
-                    </p>
-                    <p class="small_txt">
-                        Musicista
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/TATIANA/ID.jpg)" onclick="window.location='tatiana.html'"></div>
-                <div class="id_info">
-                    <a href="tatiana.html">
-                        <h2>tatiana</h2>
-                    </a>
-                    <p class="small_txt">
-                        Russia > Bolzano
-                    </p>
-                    <p class="small_txt">
-                        Pittrice
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/RAMONA/ID.jpg)" onclick="window.location='clary.html'"></div>
-                <div class="id_info">
-                    <a href="ramona.html">
-                        <h2>clary rosario</h2>
-                    </a>
-                    <p class="small_txt">
-                        Rep. Dominicana > Bolzano
-                    </p>
-                    <p class="small_txt">
-                        Ballerina, decoratrice
-                    </p>
-                </div>
-            </div>
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/sandra/ID.jpg)" onclick="window.location='sandra.html'"></div>
-                <div class="id_info">
-                    <a href="sandra.html">
-                        <h2>sandra</h2>
-                    </a>
-                    <p class="small_txt">
-                        Rep. Dominicana > Bologna
-                    </p>
-                    <p class="small_txt">
-                        Decoratrice
-                    </p>
-                </div>
-            </div>
 
-            <div class="id_card">
-                <div class="id_img" style="background-image: url(media/artigiani/AZIZ/ID.jpg)" onclick="window.location='aziz.html'"></div>
-                <div class="id_info">
-                    <a href="aziz.html">
-                        <h2>aziz</h2>
-                    </a>
-                    <p class="small_txt">
-                        Senegal > Laives
-                    </p>
-                    <p class="small_txt">
-                        Sarto
-                    </p>
+            <div id="toggle_showcase_column">
+                <h1 id="toggle_showcase_button">→</h1>
+            </div>
+            <div id="showcase_container">
+
+
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/KAMRUN/ID.jpg)" onclick="window.location='kamrun.html'"></div>
+                    <div class="id_info">
+                        <a href="kamrun.html">
+                            <h2>Kamrun Nahar</h2>
+                        </a>
+                        <p class="small_txt">
+                            Bangladesh > Bolzano
+                        </p>
+                        <p class="small_txt">
+                            Cuoca, sarta
+                        </p>
+                    </div>
                 </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/AKIF/ID.jpg)" onclick="window.location='akif.html'"></div>
+                    <div class="id_info">
+                        <a href="akif.html">
+                            <h2>akif kishiyer</h2>
+                        </a>
+                        <p class="small_txt">
+                            Iran > Brennero
+                        </p>
+                        <p class="small_txt">
+                            Orologiaio
+                        </p>
+                    </div>
+                </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/DEVORAH/ID.jpg)" onclick="window.location='devorah.html'"></div>
+                    <div class="id_info">
+                        <a href="devorah.html">
+                            <h2>devorah rojas</h2>
+                        </a>
+                        <p class="small_txt">
+                            Venezuela > Bolzano
+                        </p>
+                        <p class="small_txt">
+                            Sarta
+                        </p>
+                    </div>
+                </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/ELVIS/ID.jpg)" onclick="window.location='elvis.html'"></div>
+                    <div class="id_info">
+                        <a href="elvis.html">
+                            <h2>elvis kakiti</h2>
+                        </a>
+                        <p class="small_txt">
+                            Kenia > Bolzano
+                        </p>
+                        <p class="small_txt">
+                            Musicista
+                        </p>
+                    </div>
+                </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/TATIANA/ID.jpg)" onclick="window.location='tatiana.html'"></div>
+                    <div class="id_info">
+                        <a href="tatiana.html">
+                            <h2>tatiana</h2>
+                        </a>
+                        <p class="small_txt">
+                            Russia > Bolzano
+                        </p>
+                        <p class="small_txt">
+                            Pittrice
+                        </p>
+                    </div>
+                </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/RAMONA/ID.jpg)" onclick="window.location='clary.html'"></div>
+                    <div class="id_info">
+                        <a href="ramona.html">
+                            <h2>clary rosario</h2>
+                        </a>
+                        <p class="small_txt">
+                            Rep. Dominicana > Bolzano
+                        </p>
+                        <p class="small_txt">
+                            Ballerina, decoratrice
+                        </p>
+                    </div>
+                </div>
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/sandra/ID.jpg)" onclick="window.location='sandra.html'"></div>
+                    <div class="id_info">
+                        <a href="sandra.html">
+                            <h2>sandra</h2>
+                        </a>
+                        <p class="small_txt">
+                            Rep. Dominicana > Bologna
+                        </p>
+                        <p class="small_txt">
+                            Decoratrice
+                        </p>
+                    </div>
+                </div>
+
+                <div class="id_card">
+                    <div class="id_img" style="background-image: url(media/artigiani/AZIZ/ID.jpg)" onclick="window.location='aziz.html'"></div>
+                    <div class="id_info">
+                        <a href="aziz.html">
+                            <h2>aziz</h2>
+                        </a>
+                        <p class="small_txt">
+                            Senegal > Laives
+                        </p>
+                        <p class="small_txt">
+                            Sarto
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -423,7 +423,6 @@
         <!-------- third column ------->
 
         <div id="search_column" class="column">
-            <h1 class="language_switch">De</h1>
             <div id="search_container">
                 <h2>abilità</h2>
                 <div class="custom-select ability_filter">
@@ -483,4 +482,5 @@
 
 
     <script src="./js/script.js"></script>
+    <script src="./js/showcase-toggle.js"></script>
 </body></html>

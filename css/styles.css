@@ -111,10 +111,18 @@ body {
 }
 
 .menu_button {
-    line-height: 19pt;
+    line-height: 20pt;
     cursor: pointer;
     text-align: right;
 }
+
+
+
+
+.menu_button.active {
+    text-transform: lowercase;
+}
+
 
 
 .menu_button:nth-child(1) {
@@ -134,12 +142,6 @@ body {
     width: 87pt;
 }
 
-
-
-
-.menu_button.active {
-    text-transform: lowercase;
-}
 
 .menu_button:hover {
     text-transform: lowercase;
@@ -163,7 +165,7 @@ body {
 #covers_tab {
     width: calc(100% + 25pt);
     margin-left: -12.5pt;
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: wrap;
@@ -230,10 +232,9 @@ body {
 
 #profile_tab {
     width: 100%;
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 15pt;
 
 }
 
@@ -836,6 +837,32 @@ body {
 
 #bottom_links .small_links {
     margin-top: 19pt;
+    text-align: right;
+}
+
+#bottom_links .small_links.active {
+    text-transform: lowercase;
+}
+
+#bottom_links .small_links:nth-child(1) {
+    width: 50.6pt;
+}
+
+#bottom_links .small_links:nth-child(2) {
+    width: 90.7pt;
+}
+
+#bottom_links .small_links:nth-child(3) {
+    width: 69.3pt;
+}
+
+#bottom_links .small_links:nth-child(4) {
+    width: 44.9pt;
+}
+
+
+#bottom_links .small_links:hover {
+    text-transform: lowercase;
 }
 
 
