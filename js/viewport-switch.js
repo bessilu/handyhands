@@ -6,14 +6,6 @@
 
   jQuery(document).ajaxComplete(function () {
 
-      $("#ability_button").click(function () {
-          $("#viewport_box").html("");
-          $("#viewport_box").load("/pages/ability.html");
-          $(".menu_button").removeClass("active");
-          $("#ability_button").addClass("active");
-          document.title = 'Handy Hands';
-      });
-
 
       $("#project_button").click(function () {
           $("#viewport_box").html("");

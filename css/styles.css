@@ -37,7 +37,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     cursor: pointer;
     user-select: none;
 }
@@ -46,14 +46,14 @@ a {
     line-height: 17pt;
     letter-spacing: .5pt;
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     text-transform: capitalize;
 }
 
 .small_links {
     letter-spacing: .5pt;
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     cursor: pointer;
 }
 
@@ -74,8 +74,9 @@ a {
 
 body {
     font-family: "Monument Grotesk Semi-Mono";
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     overflow: hidden;
+    background-color: white;
 }
 
 #container {
@@ -112,24 +113,38 @@ body {
 .menu_button {
     line-height: 19pt;
     cursor: pointer;
+    text-align: right;
 }
 
 
-.menu_button.active:after {
-    content: "/";
+.menu_button:nth-child(1) {
+    width: 74.5pt;
 }
+
+
+.menu_button:nth-child(2) {
+    width: 95pt;
+}
+
+.menu_button:nth-child(3) {
+    width: 70pt;
+}
+
+.menu_button:nth-child(4) {
+    width: 87pt;
+}
+
+
+
 
 .menu_button.active {
-    margin-right: -10.9pt;
+    text-transform: lowercase;
 }
 
 .menu_button:hover {
-    margin-right: -10.9pt;
+    text-transform: lowercase;
 }
 
-.menu_button:hover:after {
-    content: "/";
-}
 
 
 #viewport_box {
@@ -180,7 +195,8 @@ body {
 }
 
 .cover_img {
-    height: calc(calc(100vw - 610pt)/2);
+    width: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
 }
@@ -189,10 +205,6 @@ body {
     .cover_card {
         margin: 0 12.5pt 25pt 12.5pt;
         width: calc(50% - 25pt);
-    }
-
-    .cover_img {
-        height: calc(calc(100vw - 610pt));
     }
 
     .cover_card.closet {
@@ -643,21 +655,42 @@ body {
 /* ------second column (ids showcase) styles------ */
 
 #showcase_column {
-    padding: 40pt 20pt 0vw 20pt;
-    min-width: 360px;
     border-left: 2px solid;
     border-right: 2px solid;
+    display: flex;
+    width: auto;
+}
+
+#toggle_showcase_column {
+    margin: 31.5pt 12.5pt 0 12.5pt;
+}
+
+#toggle_showcase_button {
+    text-align: center;
+    cursor: pointer;
+    line-height: 8pt;
+    height: 11pt;
+}
+
+#toggle_showcase_button.closet {
+    transform: rotate(180deg)
+}
+
+
+#showcase_container {
+    padding: 40pt 20pt 0 0;
+    min-width: 325px;
+    height: 100%;
     overflow: auto;
 }
 
-
 /* vv hide scrollbar vv*/
 
-#showcase_column::-webkit-scrollbar {
+#showcase_container::-webkit-scrollbar {
     display: none;
 }
 
-#showcase_column {
+#showcase_container {
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -674,7 +707,7 @@ body {
 }
 
 .id_card:last-child {
-    margin-bottom: 25pt;
+    margin-bottom: 24pt;
 }
 
 .id_img {
@@ -686,7 +719,7 @@ body {
 
 .id_info {
     max-width: 79%;
-    margin: -4pt 0 0 11pt;
+    margin: -2.5pt 0 0 11pt;
 }
 
 
@@ -728,7 +761,7 @@ body {
 }
 
 .select-selected {
-    border: 1.5pt solid rgb(255, 51, 0);
+    border: 1.5pt solid #FF3300;
     display: flex;
     justify-content: space-between;
 }
@@ -766,7 +799,7 @@ body {
 .select-items {
     position: absolute;
     background-color: #fff;
-    border: 1.5pt solid rgb(255, 51, 0);
+    border: 1.5pt solid #FF3300;
     border-top: none;
     top: 100%;
     left: 0;

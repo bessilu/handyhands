@@ -37,7 +37,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     cursor: pointer;
     user-select: none;
 }
@@ -46,14 +46,14 @@ a {
     line-height: 17pt;
     letter-spacing: .5pt;
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     text-transform: capitalize;
 }
 
 .small_links {
     letter-spacing: .5pt;
     text-decoration: none;
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     cursor: pointer;
 }
 
@@ -75,7 +75,7 @@ a {
 body {
     display: none;
     font-family: "Monument Grotesk Semi-Mono";
-    color: rgb(255, 51, 0);
+    color: #FF3300;
     overflow: hidden;
 }
 
@@ -118,11 +118,11 @@ body {
 }
 
 .menu_button.active {
-    border-bottom: 1.5pt solid rgb(255, 51, 0);
+    border-bottom: 1.5pt solid #FF3300;
 }
 
 .menu_button:hover {
-    border-bottom: 1.5pt solid rgb(255, 51, 0);
+    border-bottom: 1.5pt solid #FF3300;
 }
 
 
@@ -711,7 +711,7 @@ body {
 }
 
 .select-selected {
-    border: 1.5pt solid rgb(255, 51, 0);
+    border: 1.5pt solid #FF3300;
     display: flex;
     justify-content: space-between;
 }
@@ -749,7 +749,7 @@ body {
 .select-items {
     position: absolute;
     background-color: #fff;
-    border: 1.5pt solid rgb(255, 51, 0);
+    border: 1.5pt solid #FF3300;
     border-top: none;
     top: 100%;
     left: 0;
