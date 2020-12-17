@@ -129,29 +129,35 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $("#ability_button").click(function () {
+    $("#ability_button, #mability_button").click(function () {
         $(".tab").removeClass("off").addClass("off");
         $("#covers_tab").removeClass("off");
         $(".cover_card").removeClass("off");
         $(".cover_label").removeClass("off").addClass("off");
         $(".menu_button").removeClass("active");
         $("#ability_button").addClass("active");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands';
     });
 
-    $("#project_button").click(function () {
+    $("#project_button, #mproject_button").click(function () {
         $(".tab").removeClass("off").addClass("off");
         $("#project_tab").removeClass("off");
         $(".menu_button").removeClass("active");
         $("#project_button").addClass("active");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Progetto';
     });
 
-    $("#story_button").click(function () {
+    $("#story_button, #mstory_button").click(function () {
         $(".tab").removeClass("off").addClass("off");
         $("#story_tab").removeClass("off");
         $(".menu_button").removeClass("active");
         $("#story_button").addClass("active");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Storia';
     });
 
@@ -164,38 +170,48 @@ $(document).ready(function () {
      }); */
 
 
-    $("#contacts_button").click(function () {
+    $("#contacts_button, #mcontacts_button").click(function () {
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#contacts_tab").removeClass("off");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Contatti';
     });
 
-    $("#disclaimer_button").click(function () {
+    $("#disclaimer_button, #mdisclaimer_button").click(function () {
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#disclaimer_tab").removeClass("off");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Disclaimer';
     });
 
-    $("#supporters_button").click(function () {
+    $("#supporters_button, #msupporters_button").click(function () {
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#supporters_tab").removeClass("off");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Sostenitori';
     });
 
-    $("#credits_button").click(function () {
+    $("#credits_button, #mcredits_button").click(function () {
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#credits_tab").removeClass("off");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Credits';
     });
 
-    $("#lang_button").click(function () {
+    $("#lang_button, #mlang_button").click(function () {
         $("#viewport_box").toggleClass("hide");
         $("#showcase_container").toggleClass("hide");
         $("#search_column").toggleClass("hide");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         $("#construction_canvas").toggleClass("off");
     });
 
@@ -203,6 +219,8 @@ $(document).ready(function () {
         $("#viewport_box").toggleClass("hide");
         $("#showcase_container").toggleClass("hide");
         $("#search_column").toggleClass("hide");
+        $('#nav-icon').removeClass('open').addClass("open");
+        $('#ham_menu').addClass('off');
         $("#construction_canvas").toggleClass("off");
     });
 
@@ -225,11 +243,26 @@ $(document).ready(function () {
 
 
     $(document).ready(function () {
+
         $('#nav-icon').click(function () {
-            $(this).toggleClass('open');
-            $('#ham_menu').toggleClass('off');
+            if ($("#covers_tab").hasClass("off")) {
+
+                $(".tab").removeClass("off").addClass("off");
+                $("#covers_tab").removeClass("off");
+                $(".cover_card").removeClass("off");
+                $(".cover_label").removeClass("off").addClass("off");
+                $(".menu_button").removeClass("active");
+                $("#ability_button").addClass("active");
+                $('#nav-icon').removeClass('open');
+                document.title = 'Handy Hands';
+            } else {
+                $('#nav-icon').toggleClass('open');
+                $('#ham_menu').toggleClass('off');
+            };
         });
     });
+
+
 
 });
 

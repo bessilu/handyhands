@@ -31,7 +31,7 @@ h1 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: normal;
     font-size: 4.5vh;
-    line-height: 4.5vh;
+    line-height: 5.5vh;
     letter-spacing: .2vh;
 }
 
@@ -116,7 +116,7 @@ body {
 
 #menu_box {
     background-color: fff;
-    height: auto;
+    height: 8vh;
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -128,14 +128,14 @@ body {
     border-bottom: solid 2px;
 }
 
-.menu_button {
-    cursor: pointer;
+#menu_box .menu_button {
+    line-height: 4vh;
     display: none;
 
 }
 
 
-.menu_button.active {
+#menu_box .menu_button.active {
     display: block;
 }
 
@@ -143,8 +143,7 @@ body {
 
 #viewport_box {
     width: 100%;
-    padding: 2vh;
-    padding-top: 8.5vh;
+    padding: 8vh 2vh 0 2vh;
 }
 
 
@@ -223,11 +222,16 @@ body {
 
 #ham_menu {
     background-color: rgba(255, 255, 255, .95);
-    width: 100%;
     position: fixed;
-    top: 8.5vh;
+    width: 100%;
+    top: 8vh;
     text-align: end;
-    padding: 2vh;
+    padding: 2vh
+}
+
+.ham_menu_button {
+    cursor: pointer;
+    user-select: none;
 }
 
 
@@ -236,7 +240,8 @@ body {
 /* 36 - 39  13 - xcovers tab */
 
 #covers_tab {
-    height: 91.5vh;
+    height: 92vh;
+    padding-bottom: 2vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: wrap;
@@ -435,8 +440,9 @@ body {
 /* project tab */
 
 #project_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: column;
@@ -458,16 +464,17 @@ body {
 /* ^^ hide scrollbar ^^*/
 
 #project_tab h2 {
-    margin: 30pt 0 9pt 0;
+    margin-top: 3vh;
 }
 
 #project_tab h2:first-child {
     margin-top: 0;
-    margin-bottom: 9pt;
 }
 
-#project_tab h1:last-child {
-    margin-bottom: -5pt;
+.tab h1 {
+    font-size: 2.9vh;
+    line-height: 4.1vh;
+    letter-spacing: .15vh;
 }
 
 
@@ -475,8 +482,9 @@ body {
 /* story tab */
 
 #story_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: wrap;
@@ -499,17 +507,15 @@ body {
 /* ^^ hide scrollbar ^^*/
 
 #story_tab h2 {
-    margin-bottom: 9pt;
+    margin-top: 3vh;
 }
 
-
-#story_tab h1:last-child {
-    margin-bottom: -5pt;
+#story_tab h2:first-child {
+    margin-top: 0;
 }
-
 
 #video_story {
-    padding: 25pt 0 25pt 0;
+    padding: 3vh 0 3vh 0;
     /*max-width: 858px;*/
     margin-right: auto;
 }
@@ -517,46 +523,14 @@ body {
 
 /* subscribe tab */
 
-#subscribe_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-flow: wrap;
-    align-content: flex-start;
-}
-
-/* vv hide scrollbar vv*/
-
-#subscribe_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#subscribe_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
-
-
-#subscribe_tab h1 {
-    margin: 15pt 0 0 0;
-}
-
-#subscribe_tab a {
-    margin-top: 25pt
-}
-
 
 
 /* contacts tab */
 
 #contacts_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: wrap;
@@ -578,12 +552,14 @@ body {
 
 /* ^^ hide scrollbar ^^*/
 
-#contacts_tab h2 {
-    margin: 15pt 0 9pt 0;
+#contacts_tab h1 {
+    margin-bottom: 3vh;
 }
 
-#contacts_tab h1 {
-    margin: 0pt 0 25pt 0;
+#contacts_tab .big_link {
+    font-size: 2.9vh;
+    line-height: 4.1vh;
+    letter-spacing: .15vh;
 }
 
 
@@ -591,8 +567,9 @@ body {
 /* disclaimer tab */
 
 #disclaimer_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: wrap;
@@ -614,17 +591,15 @@ body {
 
 /* ^^ hide scrollbar ^^*/
 
-#disclaimer_tab h2 {
-    margin: 15pt 0 9pt 0;
-}
 
 
 
 /* supporters tab */
 
 #supporters_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: column;
@@ -665,8 +640,9 @@ body {
 /* credits tab */
 
 #credits_tab {
-    height: calc(100vh - 95pt);
-    padding-bottom: 25pt;
+    height: 92vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
     overflow-x: hidden;
     overflow-y: auto;
     flex-flow: column;
@@ -687,17 +663,18 @@ body {
 
 /* ^^ hide scrollbar ^^*/
 
-#credits_tab h2:first-child {
-    margin: 15pt 0 5pt 0;
-}
 
 #credits_tab h2 {
-    margin: 5pt 0 5pt 0;
+    margin-top: 3vh;
 }
 
-#credits_tab a {
-    margin-bottom: 20pt
+#credits_tab h2:first-child {
+    margin-top: 0vh;
 }
+
+
+
+
 
 
 
@@ -729,7 +706,7 @@ body {
 }
 
 #logo_bottom_wrap img {
-    width: 15vh;
+    width: 20vh;
     margin-bottom: 2vh;
     margin-top: 14vh;
 }
@@ -750,6 +727,7 @@ body {
 #construction_canvas {
     height: 100vh;
     width: 100vw;
+    padding: 2vh;
     top: 0;
     left: 0;
     user-select: none;
@@ -761,6 +739,7 @@ body {
     background-color: rgba(252, 252, 255, .85);
     z-index: 10;
 }
+
 
 #construction_canvas h1 {
     text-align: center;
