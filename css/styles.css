@@ -12,6 +12,11 @@ img {
 }
 
 
+mobile {
+    display: none !important;
+}
+
+
 /* ------font styles------ */
 
 @font-face {
