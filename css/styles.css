@@ -283,9 +283,7 @@ body {
     cursor: pointer;
 }
 
-.hide {
-    opacity: 0;
-}
+
 
 
 
@@ -664,9 +662,9 @@ body {
     width: auto;
 }
 
-#toggle_showcase_column {}
 
 #toggle_showcase_button {
+    user-select: none;
     position: relative;
     top: 31pt;
     left: 328px;
@@ -887,12 +885,38 @@ body {
 
 
 
+
+
+
+#construction_canvas {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    user-select: none;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(252, 252, 255, .85);
+    z-index: 10;
+}
+
+#construction_canvas h1 {
+    text-align: center;
+}
+
 .off {
-    display: none;
+    display: none !important;
 }
 
 .on {
     display: flex;
+}
+
+.hide {
+    opacity: 0;
 }
 
 video:focus {

@@ -192,6 +192,20 @@ $(document).ready(function () {
         document.title = 'Handy Hands / Credits';
     });
 
+    $("#lang_button").click(function () {
+        $("#viewport_box").toggleClass("hide");
+        $("#showcase_container").toggleClass("hide");
+        $("#search_column").toggleClass("hide");
+        $("#construction_canvas").toggleClass("off");
+    });
+
+    $("#construction_canvas").click(function () {
+        $("#viewport_box").toggleClass("hide");
+        $("#showcase_container").toggleClass("hide");
+        $("#search_column").toggleClass("hide");
+        $("#construction_canvas").toggleClass("off");
+    });
+
 
 });
 
