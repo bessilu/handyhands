@@ -11,7 +11,7 @@ img {
     border: 0px;
 }
 
-desktop {
+.desktop {
     display: none !important;
 }
 
@@ -29,15 +29,15 @@ desktop {
 h1 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
-    font-size: 24px;
-    line-height: 23pt;
-    letter-spacing: 1pt;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    letter-spacing: .06em;
 }
 
 h2 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 17pt;
     text-transform: uppercase;
     letter-spacing: 2pt;
