@@ -223,6 +223,14 @@ $(document).ready(function () {
         $("#video_profile").get(0).currentTime = 0;
     });
 
+
+    $(document).ready(function () {
+        $('#nav-icon').click(function () {
+            $(this).toggleClass('open');
+            $('#ham_menu').toggleClass('off');
+        });
+    });
+
 });
 
 
@@ -242,7 +250,6 @@ $(document).ready(function () {
     previousButton.addEventListener('click', function () {
         flkty.previous();
     });
-
 
 
 });
