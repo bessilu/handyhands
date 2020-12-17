@@ -285,4 +285,17 @@ $(document).ready(function () {
     });
 
 
+    var mflkty = new Flickity('.carousel.mobile');
+
+    var previousButton = document.querySelector('#mnext');
+    previousButton.addEventListener('click', function () {
+        mflkty.next();
+    });
+
+    var previousButton = document.querySelector('#mprevious');
+    previousButton.addEventListener('click', function () {
+        mflkty.previous();
+    });
+
+
 });
