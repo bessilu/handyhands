@@ -7,6 +7,10 @@
     font-size: 11pt;
 }
 
+img {
+    border: 0px;
+}
+
 
 /* ------font styles------ */
 
@@ -263,7 +267,6 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
 }
 
 
