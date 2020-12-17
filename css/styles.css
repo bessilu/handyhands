@@ -266,9 +266,25 @@ body {
     height: 100%;
 }
 
+
+#slider_buttons {
+    margin: 15pt 0 25pt 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider_button {
+    height: 18pt;
+    line-height: 15pt;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
 .hide {
     opacity: 0;
 }
+
+
 
 
 
@@ -351,7 +367,7 @@ body {
 }
 
 #video_trigger {
-    margin-top: 50pt;
+    margin-top: 25pt;
     cursor: pointer;
 }
 

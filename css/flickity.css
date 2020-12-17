@@ -45,54 +45,8 @@ https://flickity.metafizzy.co
 
 /* ---- flickity-button ---- */
 
-
-
-.flickity-button {
-    height: 19pt;
-    background-color: fff;
-    border: none;
-}
-
-
-.flickity-button-icon {
-    display: none;
-}
-
-/* ---- previous/next buttons ---- */
-
-.flickity-prev-next-button {
-    position: absolute;
-    margin-top: 10pt;
-    font-family: "Monument Grotesk Semi-Mono";
-    font-weight: 500;
-    font-size: 19pt;
-    line-height: 15pt;
-    cursor: pointer;
-    color: #FF3300;
-    /* vertically center */
-}
-
-.flickity-prev-next-button.previous:after {
-    content: "←";
-}
-
-.flickity-prev-next-button.previous {
-    content: "←";
-}
-
-.flickity-prev-next-button.next:after {
-    content: "→";
-}
-
-.flickity-prev-next-button.next {
-    right: 0;
-}
-
-/* right to left */
-
-
-/* ---- page dots ---- */
-
-.flickity-page-dots {
+.flickity-page-dots,
+.flickity-button,
+.flickity-fullscreen-button {
     display: none;
 }

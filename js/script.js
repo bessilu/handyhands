@@ -210,3 +210,25 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+$(document).ready(function () {
+
+    var flkty = new Flickity('.carousel');
+
+    var previousButton = document.querySelector('#next');
+    previousButton.addEventListener('click', function () {
+        flkty.next();
+    });
+
+    var previousButton = document.querySelector('#previous');
+    previousButton.addEventListener('click', function () {
+        flkty.previous();
+    });
+
+
+
+});
