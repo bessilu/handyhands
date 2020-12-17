@@ -7,6 +7,10 @@
     <meta name="description" content="Description">
     <meta name="author" content="Author">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="/js/flickity.js"></script>
+    <link rel="stylesheet" href="/css/flickity.css">
+
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="css/styles.css" />
     <link rel="stylesheet" media="all and (max-width: 1024px)" href="css/styles_mobile.css" />
 
@@ -38,11 +42,54 @@
 
 
 
+                <!-------- profile tab ------->
+
+                <div id="profile_tab" class="tab">
+                    <div id="left_c">
+
+                        <div id="carousel">
+                            <div class="slide" style="background-image: url(media/artigiani/KAMRUN/cover.jpg)"></div>
+                            <div class="slide hide" style="background-image: url(media/artigiani/KAMRUN/01.jpg)"></div>
+                        </div>
+
+                        <div id="slider_buttons">
+                            <div id="previous" class="slider_button">←</div>
+                            <div id="next" class="slider_button">→</div>
+                        </div>
+                        <h2 id="video_trigger">→ video</h2>
+                    </div>
+
+
+
+
+                    <div id="right_c">
+                        <h1>Kamrun Nahar</h1>
+                        <h2>Bangladesh > Bolzano</h2>
+                        <h2>Cuoca, sarta</h2>
+                        <div id="bio">
+                            <h2 class="bio_title">LA MIA STORIA</h2>
+                            <p class="bio_txt">Sono Kamrun e vengo dal Bangladesh. Sono nata a Dacca, la capitale. Mi sono laureata all’università di Rajshahi dove ho vissuto quattro anni. Poi sono tornata a Dacca e ho sposato mio marito, abbiamo vissuto lì fino al 2008 quando ci siamo trasferiti in Italia. Viviamo a Bolzano da allora e abbiamo un figlio che è all’ultimo anno di liceo.</p>
+                            <h2 class="bio_title">il mio lavoro</h2>
+                            <p class="bio_txt">Mi piace cucinare e cucire. Ho imparato entrambe le cose dalle donne della mia famiglia, mia mamma e mia nonna, quando ero bambina. Le ho messe in pratica soprattutto quando sono andata a studiare fuori casa e vivevo con mia sorella, eravamo quindi noi a cucinare e spesso anche a cucire i nostri abiti. In Italia continuo a fare entrambe le cose. Non è facile a Bolzano trovare abiti della nostra cultura e anche gli ingredienti per i nostri piatti tipici. Così gli abili li creo io secondo come sono abituata e come mi piace e faccio anche le ricette della cucina bengalese che più mi piacciono. Visto che è difficile trovare le materie prime compro la stoffa ancora da lavorare e, con altre donne, coltivo un orto con verdure tipiche del Bangladesh qui a Bolzano. Così, attraverso la pratica, mantengo forte la memoria del mio paese di origine. </p>
+                        </div>
+                    </div>
+
+                    <div id="video_canvas" class="off">
+                        <video id="video_profile" controls>
+                            <source id="gnn" src="media/artigiani/KAMRUN/video.mp4" type="video/mp4">
+                            Il tuo browser non supporta questo player.
+                        </video>
+                    </div>
+                </div>
+
+
+
+
                 <!-------- ability covers tab ------->
 
-                <div id="covers_tab" class="tab">
+                <div id="covers_tab" class="tab off">
 
-                    <div class="cover_card cuoca sarta bangladesh bolzano">
+                    <div class="cover_card closet cuoca sarta bangladesh bolzano">
                         <a href="kamrun.html">
                             <img class="cover_img" src="media/artigiani/KAMRUN/cover.jpg"></img>
                             <div class="cover_label off">
@@ -52,7 +99,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card orologiaio iran brennero">
+                    <div class="cover_card closet orologiaio iran brennero">
                         <a href="akif.html">
                             <img class="cover_img" src="media/artigiani/AKIF/cover.jpg"></img>
                             <div class="cover_label off">
@@ -62,7 +109,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card sarta venezuela bolzano">
+                    <div class="cover_card closet sarta venezuela bolzano">
                         <a href="devorah.html">
                             <img class="cover_img" src="media/artigiani/DEVORAH/cover.jpg"></img>
                             <div class="cover_label off">
@@ -72,7 +119,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card kenia musicista bolzano">
+                    <div class="cover_card closet kenia musicista bolzano">
                         <a href="elvis.html">
                             <img class="cover_img" src="media/artigiani/ELVIS/cover.jpg"></img>
                             <div class="cover_label off">
@@ -82,7 +129,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card pittrice russia bolzano">
+                    <div class="cover_card closet pittrice russia bolzano">
                         <a href="tatiana.html">
                             <img class="cover_img" src="media/artigiani/TATIANA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -92,7 +139,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card ballerina decoratrice dominicana bolzano">
+                    <div class="cover_card closet ballerina decoratrice dominicana bolzano">
                         <a href="clary.html">
                             <img class="cover_img" src="media/artigiani/RAMONA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -102,7 +149,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card decoratrice dominicana bologna">
+                    <div class="cover_card closet decoratrice dominicana bologna">
                         <a href="sandra.html">
                             <img class="cover_img" src="media/artigiani/SANDRA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -112,7 +159,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card sarta senegal laives">
+                    <div class="cover_card closet sarta senegal laives">
                         <a href="aziz.html">
                             <img class="cover_img" src="media/artigiani/AZIZ/cover.jpg"></img>
                             <div class="cover_label off">
@@ -253,9 +300,9 @@
         <div id="showcase_column" class="column">
 
             <div id="toggle_showcase_column">
-                <h1 id="toggle_showcase_button">→</h1>
+                <h1 id="toggle_showcase_button" class="closet">→</h1>
             </div>
-            <div id="showcase_container">
+            <div id="showcase_container" class="off">
 
 
                 <div class="id_card">
@@ -442,4 +489,6 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/showcase-toggle.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -7,6 +7,10 @@
     <meta name="description" content="Description">
     <meta name="author" content="Author">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="/js/flickity.js"></script>
+    <link rel="stylesheet" href="/css/flickity.css">
+
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="css/styles.css" />
     <link rel="stylesheet" media="all and (max-width: 1024px)" href="css/styles_mobile.css" />
 
@@ -43,14 +47,9 @@
                 <div id="profile_tab" class="tab">
                     <div id="left_c">
 
-                        <div id="carousel">
-                            <div class="slide" style="background-image: url(media/artigiani/KAMRUN/cover.jpg)"></div>
-                            <div class="slide hide" style="background-image: url(media/artigiani/KAMRUN/01.jpg)"></div>
-                        </div>
-
-                        <div id="slider_buttons">
-                            <div id="previous" class="slider_button">←</div>
-                            <div id="next" class="slider_button">→</div>
+                        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": "true", "selectedAttraction": 1, "friction": 1 }'>
+                            <div class="carousel-cell"><img src="media/artigiani/KAMRUN/cover.jpg"></div>
+                            <div class="carousel-cell"><img src="media/artigiani/KAMRUN/01.jpg"></div>
                         </div>
                         <h2 id="video_trigger">→ video</h2>
                     </div>
@@ -80,11 +79,12 @@
 
 
 
+
                 <!-------- ability covers tab ------->
 
                 <div id="covers_tab" class="tab off">
 
-                    <div class="cover_card cuoca sarta bangladesh bolzano">
+                    <div class="cover_card closet cuoca sarta bangladesh bolzano">
                         <a href="kamrun.html">
                             <img class="cover_img" src="media/artigiani/KAMRUN/cover.jpg"></img>
                             <div class="cover_label off">
@@ -94,7 +94,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card orologiaio iran brennero">
+                    <div class="cover_card closet orologiaio iran brennero">
                         <a href="akif.html">
                             <img class="cover_img" src="media/artigiani/AKIF/cover.jpg"></img>
                             <div class="cover_label off">
@@ -104,7 +104,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card sarta venezuela bolzano">
+                    <div class="cover_card closet sarta venezuela bolzano">
                         <a href="devorah.html">
                             <img class="cover_img" src="media/artigiani/DEVORAH/cover.jpg"></img>
                             <div class="cover_label off">
@@ -114,7 +114,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card kenia musicista bolzano">
+                    <div class="cover_card closet kenia musicista bolzano">
                         <a href="elvis.html">
                             <img class="cover_img" src="media/artigiani/ELVIS/cover.jpg"></img>
                             <div class="cover_label off">
@@ -124,7 +124,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card pittrice russia bolzano">
+                    <div class="cover_card closet pittrice russia bolzano">
                         <a href="tatiana.html">
                             <img class="cover_img" src="media/artigiani/TATIANA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -134,7 +134,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card ballerina decoratrice dominicana bolzano">
+                    <div class="cover_card closet ballerina decoratrice dominicana bolzano">
                         <a href="clary.html">
                             <img class="cover_img" src="media/artigiani/RAMONA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -144,7 +144,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card decoratrice dominicana bologna">
+                    <div class="cover_card closet decoratrice dominicana bologna">
                         <a href="sandra.html">
                             <img class="cover_img" src="media/artigiani/SANDRA/cover.jpg"></img>
                             <div class="cover_label off">
@@ -154,7 +154,7 @@
                         </a>
                     </div>
 
-                    <div class="cover_card sarta senegal laives">
+                    <div class="cover_card closet sarta senegal laives">
                         <a href="aziz.html">
                             <img class="cover_img" src="media/artigiani/AZIZ/cover.jpg"></img>
                             <div class="cover_label off">
@@ -295,9 +295,9 @@
         <div id="showcase_column" class="column">
 
             <div id="toggle_showcase_column">
-                <h1 id="toggle_showcase_button">→</h1>
+                <h1 id="toggle_showcase_button" class="closet">→</h1>
             </div>
-            <div id="showcase_container">
+            <div id="showcase_container" class="off">
 
 
                 <div class="id_card">
@@ -468,9 +468,10 @@
             </div>
 
             <div id="bottom_links">
+                <img src="media/loghi/handylogo.svg"></img>
                 <div id="contacts_button" class="small_links">Contatti</div>
                 <div id="disclaimer_button" class="small_links">Responsabilità</div>
-                <div id="supporters_button" class="small_links">Sostenitori</div>
+                <div id="supporters_button" class="small_links off">Sostenitori</div>
                 <div id="credits_button" class="small_links">Credits</div>
             </div>
         </div>
