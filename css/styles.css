@@ -256,12 +256,7 @@ body {
 .carousel-cell {
     width: 100%;
     padding-top: 150%;
-}
-
-#carougsel {
-    width: 100%;
-    padding-top: 150%;
-    position: relative;
+    overflow: hidden;
 }
 
 .carousel-cell img {
