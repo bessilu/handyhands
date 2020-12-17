@@ -200,15 +200,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    var $carousel = $('.main_carousel').flickity();
-
-    // previous
-    $('.slider_button').on('click', function () {
-        $carousel.flickity('next');
-    });
-
-
-
     $("#video_trigger").click(function () {
         $("#video_canvas").toggleClass("off").toggleClass("on");
     });

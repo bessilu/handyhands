@@ -388,11 +388,16 @@ body {
 /* ^^ hide scrollbar ^^*/
 
 #project_tab h2 {
-    margin: 24pt 0 9pt 0;
+    margin: 30pt 0 9pt 0;
 }
 
 #project_tab h2:first-child {
-    margin: 15pt 0 9pt 0;
+    margin-top: 0;
+    margin-bottom: 9pt;
+}
+
+#project_tab h1:last-child {
+    margin-bottom: -5pt;
 }
 
 
@@ -400,7 +405,7 @@ body {
 /* story tab */
 
 #story_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -424,19 +429,26 @@ body {
 /* ^^ hide scrollbar ^^*/
 
 #story_tab h2 {
-    margin: 15pt 0 9pt 0;
+    margin-bottom: 9pt;
 }
+
+
+#story_tab h1:last-child {
+    margin-bottom: -5pt;
+}
+
 
 #video_story {
     padding: 25pt 0 25pt 0;
+    /*max-width: 858px;*/
+    margin-right: auto;
 }
-
 
 
 /* subscribe tab */
 
 #subscribe_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -473,7 +485,7 @@ body {
 /* contacts tab */
 
 #contacts_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -509,7 +521,7 @@ body {
 /* disclaimer tab */
 
 #disclaimer_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -541,7 +553,7 @@ body {
 /* supporters tab */
 
 #supporters_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -583,7 +595,7 @@ body {
 /* credits tab */
 
 #credits_tab {
-    height: calc(100vh - 69.5pt);
+    height: calc(100vh - 95pt);
     padding-bottom: 25pt;
     overflow-x: hidden;
     overflow-y: auto;
@@ -867,4 +879,8 @@ body {
 
 .on {
     display: flex;
+}
+
+video:focus {
+    outline: none;
 }
