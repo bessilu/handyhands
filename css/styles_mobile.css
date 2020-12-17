@@ -29,7 +29,7 @@ desktop {
 h1 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
-    font-size: 19px;
+    font-size: 24px;
     line-height: 23pt;
     letter-spacing: 1pt;
 }
@@ -37,7 +37,7 @@ h1 {
 h2 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: 500;
-    font-size: 11pt;
+    font-size: 16px;
     line-height: 17pt;
     text-transform: uppercase;
     letter-spacing: 2pt;
