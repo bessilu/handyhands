@@ -129,19 +129,22 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $("#ability_button, #mability_button").click(function () {
+
+    $("#mability_button").click(function () {
+        window.scrollTo(0, 0);
         $(".tab").removeClass("off").addClass("off");
         $("#covers_tab").removeClass("off");
         $(".cover_card").removeClass("off");
         $(".cover_label").removeClass("off").addClass("off");
         $(".menu_button").removeClass("active");
         $("#ability_button").addClass("active");
-        $('#nav-icon').removeClass('open').addClass("open");
-        $('#ham_menu').addClass('off');
+        $('#nav-icon').removeClass('open');
+        $('#ham_menu').removeClass("off").addClass('off');
         document.title = 'Handy Hands';
     });
 
     $("#project_button, #mproject_button").click(function () {
+        window.scrollTo(0, 0);
         $(".tab").removeClass("off").addClass("off");
         $("#project_tab").removeClass("off");
         $(".menu_button").removeClass("active");
@@ -152,6 +155,7 @@ $(document).ready(function () {
     });
 
     $("#story_button, #mstory_button").click(function () {
+        window.scrollTo(0, 0);
         $(".tab").removeClass("off").addClass("off");
         $("#story_tab").removeClass("off");
         $(".menu_button").removeClass("active");
@@ -171,9 +175,11 @@ $(document).ready(function () {
 
 
     $("#contacts_button, #mcontacts_button").click(function () {
+        window.scrollTo(0, 0);
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#contacts_tab").removeClass("off");
+        $("#contacts_label").addClass("active");
         $('#nav-icon').removeClass('open').addClass("open");
         $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Contatti';
@@ -189,24 +195,29 @@ $(document).ready(function () {
     });
 
     $("#supporters_button, #msupporters_button").click(function () {
+        window.scrollTo(0, 0);
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#supporters_tab").removeClass("off");
+        $("#supporters_label").addClass("active");
         $('#nav-icon').removeClass('open').addClass("open");
         $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Sostenitori';
     });
 
     $("#credits_button, #mcredits_button").click(function () {
+        window.scrollTo(0, 0);
         $(".menu_button").removeClass("active");
         $(".tab").removeClass("off").addClass("off");
         $("#credits_tab").removeClass("off");
+        $("#credits_label").addClass("active");
         $('#nav-icon').removeClass('open').addClass("open");
         $('#ham_menu').addClass('off');
         document.title = 'Handy Hands / Credits';
     });
 
     $("#lang_button, #mlang_button").click(function () {
+        window.scrollTo(0, 0);
         $("#viewport_box").toggleClass("hide");
         $("#showcase_container").toggleClass("hide");
         $("#search_column").toggleClass("hide");
@@ -235,7 +246,8 @@ $(document).ready(function () {
     $("#video_trigger").click(function () {
         $("#video_canvas").toggleClass("off").toggleClass("on");
     });
-    $("#video_canvas").click(function () {
+    $("#video_canvas").on('click', function (e) {
+        if (e.target !== e.currentTarget) return;
         $("#video_canvas").toggleClass("off").toggleClass("on");
         $("#video_profile").get(0).pause();
         $("#video_profile").get(0).currentTime = 0;
@@ -246,56 +258,41 @@ $(document).ready(function () {
 
         $('#nav-icon').click(function () {
             if ($("#covers_tab").hasClass("off")) {
-
                 $(".tab").removeClass("off").addClass("off");
                 $("#covers_tab").removeClass("off");
                 $(".cover_card").removeClass("off");
                 $(".cover_label").removeClass("off").addClass("off");
                 $(".menu_button").removeClass("active");
                 $("#ability_button").addClass("active");
-                $('#nav-icon').removeClass('open');
+                $('#nav-icon').addClass('open').removeClass('open');
                 document.title = 'Handy Hands';
             } else {
                 $('#nav-icon').toggleClass('open');
-                $('#ham_menu').toggleClass('off');
+                $('#ham_menu').toggleClass('off')
             };
         });
+
     });
 
+    $(document).ready(function () {
 
+        $('#menu_box').click(function () {
+            $(".cover_label").removeClass("off").addClass("off");
+        });
 
-});
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            $(".cover_card").on('click', function (e) {
+                if (e.target !== e.currentTarget) return;
+                var proflink = $(this).children('a:first').attr("href");
+                $(".cover_label").removeClass("off").addClass("off");
+                $(this).children('.cover_label').addClass("off").removeClass("off");
+                $(this).children('.cover_label').find('a').attr("href", proflink);
+            });
 
+            $(".cover_card").on('click', function (e) {
+                if (e.target !== e.currentTarget) return;
+            });
+        };
 
-
-
-
-$(document).ready(function () {
-
-    var flkty = new Flickity('.carousel');
-
-    var previousButton = document.querySelector('#next');
-    previousButton.addEventListener('click', function () {
-        flkty.next();
     });
-
-    var previousButton = document.querySelector('#previous');
-    previousButton.addEventListener('click', function () {
-        flkty.previous();
-    });
-
-
-    var mflkty = new Flickity('.carousel.mobile');
-
-    var previousButton = document.querySelector('#mnext');
-    previousButton.addEventListener('click', function () {
-        mflkty.next();
-    });
-
-    var previousButton = document.querySelector('#mprevious');
-    previousButton.addEventListener('click', function () {
-        mflkty.previous();
-    });
-
-
 });

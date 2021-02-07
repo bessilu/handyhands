@@ -30,8 +30,8 @@ img {
 h1 {
     font-family: "Monument Grotesk Semi-Mono";
     font-weight: normal;
-    font-size: 4.5vh;
-    line-height: 5.5vh;
+    font-size: 4vh;
+    line-height: 5vh;
     letter-spacing: .2vh;
 }
 
@@ -52,7 +52,7 @@ a {
 }
 
 p {
-    line-height: 4.5vh;
+    line-height: 3.7vh;
     letter-spacing: .15vh;
 }
 
@@ -71,37 +71,41 @@ p {
     cursor: pointer;
 }
 
-.big_link {
-    font-size: 18pt;
-    letter-spacing: 1pt;
-    line-height: 18pt;
-    padding-bottom: .5pt;
-}
-
-.big_link:hover {
-    border-bottom: 1.5pt solid;
-}
-
 
 
 /**/
 
+html,
+body {
+    height: 100%
+}
+
 body {
     font-family: "Monument Grotesk Semi-Mono";
     color: #FF3300;
-    overflow: hidden;
     background-color: white;
+    overflow-x: hidden;
     width: auto;
-    height: auto;
+}
+
+
+/* vv hide scrollbar vv*/
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 #container {
     display: flex;
     margin: 0;
-}
-
-.column {
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -109,10 +113,6 @@ body {
 
 
 /* ------FIRST COLUMN STYLES------ */
-
-#viewport_column {
-    width: 100%;
-}
 
 #menu_box {
     background-color: fff;
@@ -122,8 +122,6 @@ body {
     z-index: 10;
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    align-content: flex-start;
     padding: 2vh;
     border-bottom: solid 2px;
 }
@@ -143,6 +141,10 @@ body {
 
 #viewport_box {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-content: space-between;
     padding: 8vh 2vh 0 2vh;
 }
 
@@ -163,9 +165,9 @@ body {
 #nav-icon span {
     display: block;
     position: absolute;
-    height: 1.5px;
+    height: 2px;
     width: 100%;
-    background-color: #d3531a;
+    background-color: #FF3300;
     left: 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -223,6 +225,7 @@ body {
 #ham_menu {
     background-color: rgba(255, 255, 255, .95);
     position: fixed;
+    z-index: 10;
     width: 100%;
     top: 8vh;
     text-align: end;
@@ -236,37 +239,36 @@ body {
 
 
 
+.column {
+    height: 100%;
+}
+
+#viewport_column {
+    width: 100%;
+}
+
+
 
 /* 36 - 39  13 - xcovers tab */
 
 #covers_tab {
-    height: 92vh;
+    min-width: calc(100% + 2vh) !important;
+    margin-left: -1vh;
     padding-bottom: 2vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: wrap;
-    justify-content: space-between;
 }
 
-
-/* vv hide scrollbar vv*/
-
-#covers_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#covers_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 .cover_card {
-    margin-bottom: 2vh;
-    width: calc(50% - 1vh);
+    margin: 0 1vh 2vh 1vh;
+    width: calc(50% - 2vh);
+    display: flex;
+    flex-flow: reverse;
+    position: relative;
+}
+
+.cover_card > a {
+    pointer-events: none;
 }
 
 
@@ -277,16 +279,32 @@ body {
 
 @media only screen and (min-width: 768px) {
     .cover_card {
-        width: calc(33.3% - 1vh);
+        width: calc(33.3% - 2vh);
     }
 }
 
 
-
-
-
 .cover_label {
-    margin-top: 11pt;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    background-color: #FF3300;
+    height: 100%;
+    width: 100%;
+
+}
+
+.cover_label > a {
+    padding: 0 2vh .5vh 2vh;
+    color: fff;
+}
+
+.cover_label p {
+    display: none;
 }
 
 
@@ -297,11 +315,6 @@ body {
 
 /* profile tab */
 
-#profile_tab {
-    overflow-x: hidden;
-    overflow-y: auto;
-
-}
 
 
 
@@ -311,6 +324,7 @@ body {
 
 .carousel {
     margin-top: 3vh;
+    user-select: none;
 }
 
 .carousel-cell {
@@ -318,6 +332,7 @@ body {
     padding-top: 150%;
     overflow: hidden;
 }
+
 
 .carousel-cell img {
     position: absolute;
@@ -346,9 +361,8 @@ body {
 
 
 #right_c {
-    height: 92vh;
+    height: calc(100% - 8vh);
     padding-top: 3vh;
-    overflow-x: hidden;
 }
 
 #right_c h1 {
@@ -365,36 +379,6 @@ body {
 
 
 
-
-
-
-
-/* vv hide scrollbar vv*/
-
-#profile_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#profile_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-
-#right_c::-webkit-scrollbar {
-    display: none;
-}
-
-#right_c {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 #video_canvas {
     width: 100%;
@@ -421,28 +405,11 @@ body {
 /* project tab */
 
 #project_tab {
-    height: 92vh;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: column;
 }
 
-/* vv hide scrollbar vv*/
-
-#project_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#project_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 #project_tab h2 {
     margin-top: 3vh;
@@ -454,7 +421,7 @@ body {
 
 .tab h1 {
     font-size: 2.9vh;
-    line-height: 4.1vh;
+    line-height: 3.7vh;
     letter-spacing: .15vh;
 }
 
@@ -463,29 +430,12 @@ body {
 /* story tab */
 
 #story_tab {
-    height: 92vh;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: wrap;
     align-content: flex-start;
 }
 
-/* vv hide scrollbar vv*/
-
-#story_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#story_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 #story_tab h2 {
     margin-top: 3vh;
@@ -496,6 +446,9 @@ body {
 }
 
 #video_story {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 62vw !important;
     padding: 3vh 0 3vh 0;
     /*max-width: 858px;*/
     margin-right: auto;
@@ -509,29 +462,11 @@ body {
 /* contacts tab */
 
 #contacts_tab {
-    height: 92vh;
+    flex-flow: wrap;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-flow: wrap;
-    align-content: flex-start;
 }
 
-/* vv hide scrollbar vv*/
-
-#contacts_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#contacts_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 #contacts_tab h1 {
     margin-bottom: 3vh;
@@ -548,29 +483,12 @@ body {
 /* disclaimer tab */
 
 #disclaimer_tab {
-    height: 92vh;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: wrap;
     align-content: flex-start;
 }
 
-/* vv hide scrollbar vv*/
-
-#disclaimer_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#disclaimer_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 
 
@@ -578,71 +496,67 @@ body {
 /* supporters tab */
 
 #supporters_tab {
-    height: 92vh;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: column;
 }
 
-/* vv hide scrollbar vv*/
 
-#supporters_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#supporters_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 #supporters_tab h2 {
-    margin: 15pt 0 25pt 0;
+    margin: 0 0 0vh 0;
 }
 
-#logo_box {
-    display: flex;
-    justify-content: space-between;
+
+.logo_box {
+    display: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 1.5vh 0 1.5vh 0;
 }
+
+#supporters_tab p {
+    margin: 1.5vh 0 1.5vh 0;
+}
+
+
+
 
 .supp_logo {
-    height: 50pt;
-    width: auto;
+    width: 100%;
+    padding: 5vh 10vh 5vh 10vh;
 }
 
+
+@media only screen and (min-width: 550px) {
+
+    .supp_logo {
+        width: calc(50% - 1vh);
+        padding: 5vh 5vh 5vh 5vh;
+    }
+
+}
+
+@media only screen and (min-width: 750px) {
+
+    .supp_logo {
+        width: calc(25% - 1vh);
+        padding: 5vh 2.5vh 5vh 2.5vh;
+    }
+
+    
+}
 
 
 
 /* credits tab */
 
 #credits_tab {
-    height: 92vh;
     padding-bottom: 3vh;
     padding-top: 3vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     flex-flow: column;
 }
 
-/* vv hide scrollbar vv*/
-
-#credits_tab::-webkit-scrollbar {
-    display: none;
-}
-
-#credits_tab {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* ^^ hide scrollbar ^^*/
 
 
 #credits_tab h2 {
@@ -675,22 +589,23 @@ body {
 
 #bottom_links {
     width: 100%;
+    padding: 9vh 0 2vh 0;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
     background-color: white;
 }
 
-#logo_bottom_wrap {
+/* #logo_bottom_wrap {
     width: 100%;
 
 }
 
 #logo_bottom_wrap img {
-    width: 20vh;
+    width: 12.1vh;
     margin-bottom: 2vh;
     margin-top: 14vh;
-}
+} */
 
 #bottom_links .small_links {
     font-size: 2.6vh;

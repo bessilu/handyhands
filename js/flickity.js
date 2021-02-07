@@ -4601,3 +4601,42 @@
     return Flickity;
 
 }));
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+
+    var flkty = new Flickity('.carousel');
+
+    var previousButton = document.querySelector('#next');
+    previousButton.addEventListener('click', function () {
+        flkty.next();
+    });
+
+    var previousButton = document.querySelector('#previous');
+    previousButton.addEventListener('click', function () {
+        flkty.previous();
+    });
+
+
+    var mflkty = new Flickity('.carousel.mobile');
+
+    var previousButton = document.querySelector('#mnext');
+    previousButton.addEventListener('click', function () {
+        mflkty.next();
+    });
+
+    var previousButton = document.querySelector('#mprevious');
+    previousButton.addEventListener('click', function () {
+        mflkty.previous();
+    });
+
+
+
+});
